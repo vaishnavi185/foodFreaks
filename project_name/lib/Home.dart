@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
             // Background Image
             Positioned(
               top: 0,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width, // Make it full width
                 height: screenHeight * 0.6, // Take 60% of screen height
                 child: Image.asset(
