@@ -16,8 +16,8 @@ class _NavbarState extends State<Navbar> {
       backgroundColor: Colors.white,
       body: <Widget>[
         const Center(child:Text("home")),
-        const Center(child:Text("home")),
-        const Center(child:Text("home"))
+        const Center(child:Text("barcode")),
+        const Center(child:Text("profile"))
       ][currentPageIndex],
       bottomNavigationBar:
       Container(
@@ -40,8 +40,8 @@ class _NavbarState extends State<Navbar> {
           },
           destinations: <Widget>[
             buildDestination(Icons.home_outlined, Icons.home_filled,0),
-            buildDestination(Icons.home_outlined, Icons.home_filled,1),
-            buildDestination(Icons.home_outlined, Icons.home_filled,2),
+            buildDestination(Icons.qr_code_scanner_outlined, Icons.qr_code_scanner_outlined,1),
+            buildDestination(Icons.person_4_outlined, Icons.person_4_outlined,2),
           ]
           ),
       )
