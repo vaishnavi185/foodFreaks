@@ -229,61 +229,6 @@ class Signup extends StatelessWidget {
               ),
             ),
           ),
-
-          // Welcome Text Above the Container
-          // Positioned(
-          //   top: MediaQuery.of(context).size.height * 0.35, // 30% from the top
-          //   left: MediaQuery.of(context).size.width * 0.05, // 5% from the left
-
-          //   child: Column(
-          //     children: [
-          //       Text(
-          //         "Getting Started",
-          //         style: TextStyle(
-          //           fontSize: 25,
-          //           fontWeight: FontWeight.bold,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //       SizedBox(height: 2),
-          //       Text(
-          //         "create account to continue",
-          //         style: TextStyle(
-          //           fontSize: 15,
-          //           color: Colors.white70,
-          //         ),
-          //       ),
-          //       SizedBox(height: 9),
-          //       Row(
-          //            mainAxisAlignment: MainAxisAlignment.start,
-          //             children: [
-          //              const SizedBox(width: 10),
-          //               IconButton(
-          //                 onPressed: () {
-          //                   print('Facebook clicked');
-          //                 },
-          //                 icon: FaIcon(
-          //                   FontAwesomeIcons.google,
-          //                   size: 30,
-          //                   color: Colors.blue,
-          //                 ),
-          //               ),
-          //               const SizedBox(width: 2),
-          //               IconButton(
-          //                 onPressed: () {
-          //                   print('Google clicked');
-          //                 },
-          //                 icon: FaIcon(
-          //                   FontAwesomeIcons.facebook,
-          //                   size: 30,
-          //                   color: Colors.red,
-          //                 ),
-          //               ),
-          //             ],
-          //           ),
-          //     ],
-          //   ),
-          // ),
         ],
       ),
     );
