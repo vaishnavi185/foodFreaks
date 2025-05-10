@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project_name/Form.dart';
 import 'package:project_name/login.dart';
 // import 'package:new_flutter/login.dart';
 
@@ -108,7 +109,11 @@ class Signup extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Frorm()),
+                              );},
                         child: const Text(
                           "SIGNUP",
                           style: TextStyle(
