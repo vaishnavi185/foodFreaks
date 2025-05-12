@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_name/Recipe_page/Recipe_page.dart';
 import 'package:project_name/Splash.dart';
 import 'package:project_name/NavBar.dart';
 import 'package:project_name/Form.dart';
-import 'package:project_name/recipe.dart';
+import 'package:project_name/Recipe_page/bg.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Recipe_page() ,
+      home:  RecipePage()
     );
   }
 }
