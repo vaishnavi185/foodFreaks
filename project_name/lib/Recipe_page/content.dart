@@ -8,15 +8,14 @@ class Content extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body:
-       Column(
-        children: [
-          Container(
-            height: 100,
-            color: Colors.red,
-
-          )
-        ],
-      )
+       SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            
+          ],
+        ),
+       )
     );
   }
 }
