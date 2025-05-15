@@ -1,77 +1,96 @@
+import 'dart:convert'; // To decode JSON
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // To load asset files
 
-class ImgAnimation extends StatefulWidget {
-  const ImgAnimation({super.key});
+class CarouselFromJson extends StatefulWidget {
+  const CarouselFromJson({super.key});
 
   @override
-  State<ImgAnimation> createState() => _ImgAnimationState();
+  State<CarouselFromJson> createState() => _CarouselFromJsonState();
 }
 
-class _ImgAnimationState extends State<ImgAnimation>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-  bool zoomedIn = false;
+class _CarouselFromJsonState extends State<CarouselFromJson> {
+  final PageController _pageController = PageController(viewportFraction: 0.5);
+  double _currentPage = 0.0;
+
+  // List to hold decoded JSON items
+  List<dynamic> _items = [];
+
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 300),
-    );
-    _animation = Tween<double>(
-      begin: 1.0,
-      end: 1.5,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+
+    // Load JSON data from assets on initialization
+    _loadJson();
+
+    // Listen to page scroll for zooming logic
+    _pageController.addListener(() {
+      setState(() {
+        _currentPage = _pageController.page ?? 0;
+      });
+    });
   }
 
-  void _toggleZoom() {
-    if (zoomedIn) {
-      _controller.reverse();
-    } else {
-      _controller.forward();
-    }
-    zoomedIn = !zoomedIn;
+  // Function to load and parse JSON file from assets
+  Future<void> _loadJson() async {
+    // Load the raw string from the asset file
+    final String response = await rootBundle.loadString('assets/test.json');
+
+    // Decode the JSON string into a Dart list
+    final data = json.decode(response);
+
+    // Update state with parsed data
+    setState(() {
+      _items = data;
+    });
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
+  // Function to calculate zoom scale for each image
+  double _calculateScale(int index) {
+    return 1.0 - ((_currentPage - index).abs() * 0.5).clamp(0.0, 1.0);
   }
 
   @override
   Widget build(BuildContext context) {
     final Width = MediaQuery.of(context).size.width;
-    return Scaffold(backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            Container(height: Width/4,
-            width: Width/4,
-            margin: EdgeInsets.all(Width/9),
-              decoration: BoxDecoration( 
-              borderRadius: BorderRadius.all(Radius.circular(100)),
-              image: DecorationImage(image: AssetImage("assets/unsplash_fdlZBWIP0aM.png"),fit: BoxFit.fill)
-            ),),
-            Container(height: Width/4,
-            width: Width/4,
-            margin: EdgeInsets.all(Width/9),
-              decoration: BoxDecoration( 
-              borderRadius: BorderRadius.all(Radius.circular(100)),
-              image: DecorationImage(image: AssetImage("assets/unsplash_fdlZBWIP0aM.png"),fit: BoxFit.fill)
-            ),),
-            Container(height: Width/4,
-            width: Width/4,
-            margin: EdgeInsets.all(Width/20),
-              decoration: BoxDecoration( 
-              borderRadius: BorderRadius.all(Radius.circular(100)),
-              image: DecorationImage(image: AssetImage("assets/unsplash_fdlZBWIP0aM.png"),fit: BoxFit.fill)
-            ),),
-          ],
-        ),
-      )
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body:
+          _items.isEmpty
+              ? const Center(child: CircularProgressIndicator()) // Show loading
+              : Center(
+                child: SizedBox(
+                  height: Width/2,width: Width,
+                  child: PageView.builder(
+                    itemCount: _items.length,
+                    controller: _pageController,
+                    itemBuilder: (context, index) {
+                      final scale = _calculateScale(index);
+
+                      // ✅ Accessing image path from decoded JSON data
+                      final imagePath = _items[index]['MainImage'];
+
+                      return Transform.scale(
+                        scale: scale,
+                        child: Container( height: Width/20, width:Width/20 ,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color.fromARGB(255, 18, 18, 18).withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 50,
+                               offset: Offset(0, 9),
+                            ),
+                          ],
+                          borderRadius: BorderRadius.all(Radius.circular(Width)),
+                          image:DecorationImage
+                          (image: AssetImage(imagePath),fit: BoxFit.fill,)), 
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
     );
   }
 }

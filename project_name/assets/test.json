@@ -17,5 +17,77 @@
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
         
+    },{
+        "id": 2,
+        "Name": "Fried Shrimp",
+        "Content": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
+        "Time":"20 min",
+        "Kcal": "150kcal",
+        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+        "Ingradient_1": "Broccoli",
+        "Ingradient_1img": "assets/broccoli.png",
+        "Ingradient_2": "Chilli",
+        "Ingradient_2img": "assets/broccoli.png",
+        "Ingradient_3": "Corn",
+        "Ingradient_3img": "assets/broccoli.png",
+        "Ingradient_4": "Carrot",
+        "Ingradient_4img": "assets/broccoli.png",
+        "Ingradient_5": "Carrot",
+        "Ingradient_5img": "assets/broccoli.png"
+        
+    },{
+        "id": 3,
+        "Name": "Fried Shrimp",
+        "Content": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
+        "Time":"20 min",
+        "Kcal": "150kcal",
+        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+        "Ingradient_1": "Broccoli",
+        "Ingradient_1img": "assets/broccoli.png",
+        "Ingradient_2": "Chilli",
+        "Ingradient_2img": "assets/broccoli.png",
+        "Ingradient_3": "Corn",
+        "Ingradient_3img": "assets/broccoli.png",
+        "Ingradient_4": "Carrot",
+        "Ingradient_4img": "assets/broccoli.png",
+        "Ingradient_5": "Carrot",
+        "Ingradient_5img": "assets/broccoli.png"
+        
+    },{
+        "id": 4,
+        "Name": "Fried Shrimp",
+        "Content": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
+        "Time":"20 min",
+        "Kcal": "150kcal",
+        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+        "Ingradient_1": "Broccoli",
+        "Ingradient_1img": "assets/broccoli.png",
+        "Ingradient_2": "Chilli",
+        "Ingradient_2img": "assets/broccoli.png",
+        "Ingradient_3": "Corn",
+        "Ingradient_3img": "assets/broccoli.png",
+        "Ingradient_4": "Carrot",
+        "Ingradient_4img": "assets/broccoli.png",
+        "Ingradient_5": "Carrot",
+        "Ingradient_5img": "assets/broccoli.png"
+        
+    },{
+        "id": 5,
+        "Name": "Fried Shrimp",
+        "Content": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
+        "Time":"20 min",
+        "Kcal": "150kcal",
+        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+        "Ingradient_1": "Broccoli",
+        "Ingradient_1img": "assets/broccoli.png",
+        "Ingradient_2": "Chilli",
+        "Ingradient_2img": "assets/broccoli.png",
+        "Ingradient_3": "Corn",
+        "Ingradient_3img": "assets/broccoli.png",
+        "Ingradient_4": "Carrot",
+        "Ingradient_4img": "assets/broccoli.png",
+        "Ingradient_5": "Carrot",
+        "Ingradient_5img": "assets/broccoli.png"
+        
     }
 ]

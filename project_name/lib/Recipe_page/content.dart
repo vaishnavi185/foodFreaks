@@ -9,7 +9,7 @@ class Content extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body:
-      ImgAnimation()
+      CarouselFromJson()
     );
   }
 }
