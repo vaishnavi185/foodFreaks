@@ -23,7 +23,7 @@ class _NavbarState extends State<Navbar> {
       Container(
         decoration: BoxDecoration(
           color: Color(0xff252830).withOpacity(0.8),
-          borderRadius: BorderRadius.all(Radius.circular(24))
+          borderRadius: BorderRadius.vertical(top: Radius.circular(46))
         ),
         padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
         child: NavigationBar(
