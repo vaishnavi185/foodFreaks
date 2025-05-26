@@ -86,12 +86,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
-                                    color: const Color.fromARGB(
-                                      255,
-                                      18,
-                                      18,
-                                      18,
-                                    ).withOpacity(0.5),
+                                    color: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
                                     spreadRadius: 5,
                                     blurRadius: 50,
                                     offset: Offset(0, 9),
