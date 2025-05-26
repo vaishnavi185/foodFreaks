@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:project_name/Home.dart';
 import 'package:project_name/Recipe_Form.dart';
+import 'package:project_name/Recipe_page/content.dart';
 
 class Recipe_bg extends StatelessWidget {
   const Recipe_bg({super.key});
@@ -57,8 +58,8 @@ class Recipe_bg extends StatelessWidget {
                   bottom: -circleDiameter / 5 + 50,
                   left: -Width / 2,
                   child: Container(
-                    width: circleDiameter,
-                    height: circleDiameter,
+                    width: circleDiameter*1.02,
+                    height: circleDiameter*1.02,
                     decoration: BoxDecoration(
                       color: Color(0xff272A32),
                       shape: BoxShape.circle,
@@ -66,6 +67,7 @@ class Recipe_bg extends StatelessWidget {
                         image: AssetImage("assets/Rectangle.png"),
                       ),
                     ),
+                    // child: Content(),
                   ),
                 ),
                 Positioned(

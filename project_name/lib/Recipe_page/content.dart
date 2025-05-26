@@ -6,10 +6,11 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body:
-      CarouselFromJson()
+      body: CarouselFromJson()
+      
     );
   }
 }

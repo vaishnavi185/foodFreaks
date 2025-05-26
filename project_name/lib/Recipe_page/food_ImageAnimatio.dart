@@ -50,6 +50,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
     return 1.0 - ((_currentPage - index).abs() * 0.5).clamp(0.0, 1.0);
   }
 
+
   @override
   Widget build(BuildContext context) {
     final Width = MediaQuery.of(context).size.width;
@@ -58,38 +59,59 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
       body:
           _items.isEmpty
               ? const Center(child: CircularProgressIndicator()) // Show loading
-              : Center(
-                child: SizedBox(
-                  height: Width/2,width: Width,
-                  child: PageView.builder(
-                    itemCount: _items.length,
-                    controller: _pageController,
-                    itemBuilder: (context, index) {
-                      final scale = _calculateScale(index);
-
-                      // ✅ Accessing image path from decoded JSON data
-                      final imagePath = _items[index]['MainImage'];
-
-                      return Transform.scale(
-                        scale: scale,
-                        child: Container( height: Width/20, width:Width/20 ,
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color.fromARGB(255, 18, 18, 18).withOpacity(0.5),
-                              spreadRadius: 5,
-                              blurRadius: 50,
-                               offset: Offset(0, 9),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(Width)),
-                          image:DecorationImage
-                          (image: AssetImage(imagePath),fit: BoxFit.fill,)), 
-                        ),
-                      );
-                    },
+              : Column(
+                children: [
+                  SizedBox(
+                    height: Width /3.5,
+                  
                   ),
-                ),
+                  Center(
+                    child: SizedBox(
+                      height: Width / 2,
+                      width: Width,
+                      child: PageView.builder(
+                        itemCount: _items.length,
+                        controller: _pageController,
+                        itemBuilder: (context, index) {
+                          final scale = _calculateScale(index);
+
+                          // ✅ Accessing image path from decoded JSON data
+                          final imagePath = _items[index]['MainImage'];
+
+                          return Transform.scale(
+                            scale: scale,
+                            child: Container(
+                              height: Width / 30,
+                              width: Width / 20,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color.fromARGB(
+                                      255,
+                                      18,
+                                      18,
+                                      18,
+                                    ).withOpacity(0.5),
+                                    spreadRadius: 5,
+                                    blurRadius: 50,
+                                    offset: Offset(0, 9),
+                                  ),
+                                ],
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(Width),
+                                ),
+                                image: DecorationImage(
+                                  image: AssetImage(imagePath),
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
               ),
     );
   }
