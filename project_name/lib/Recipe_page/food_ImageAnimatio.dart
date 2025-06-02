@@ -66,9 +66,11 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                   
                   ),
                   Center(
-                    child: SizedBox(
-                      height: Width / 2,
+                    child: Container(
+                      decoration: BoxDecoration( color: Colors. grey, borderRadius: BorderRadius. circular(10.0), ),
+                      height: Width / 1.5,
                       width: Width,
+                      
                       child: PageView.builder(
                         itemCount: _items.length,
                         controller: _pageController,
@@ -81,9 +83,10 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                           return Transform.scale(
                             scale: scale,
                             child: Container(
-                              height: Width / 30,
-                              width: Width / 20,
+                              height: Width ,
+                              width: Width ,
                               decoration: BoxDecoration(
+                                
                                 boxShadow: [
                                   BoxShadow(
                                     color: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
