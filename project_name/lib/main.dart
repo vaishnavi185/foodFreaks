@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_name/Recipe_page/Recipe_page.dart';
-import 'package:project_name/Splash.dart';
-import 'package:project_name/NavBar.dart';
-import 'package:project_name/Form.dart';
-import 'package:project_name/Recipe_page/bg.dart';
-import 'package:project_name/User_Page/Usermain.dart';
 void main() {
   runApp(const MyApp());
 }

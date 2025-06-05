@@ -11,9 +11,9 @@ class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0x2B2E37),
+      backgroundColor: Color(0x002b2e37),
       appBar: AppBar(
-          backgroundColor: Color(0x2B2E37),
+          backgroundColor: Color(0x002b2e37),
         title: Text("Good Morning",
         style: TextStyle(
           fontSize: 16,

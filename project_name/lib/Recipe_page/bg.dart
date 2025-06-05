@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:project_name/Home.dart';
 import 'package:project_name/Recipe_Form.dart';
-import 'package:project_name/Recipe_page/content.dart';
 
 class Recipe_bg extends StatelessWidget {
   const Recipe_bg({super.key});
