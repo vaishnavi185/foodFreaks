@@ -12,95 +12,98 @@ class CarouselFromJson extends StatefulWidget {
 class _CarouselFromJsonState extends State<CarouselFromJson> {
   final PageController _pageController = PageController(viewportFraction: 0.5);
   double _currentPage = 0.0;
-
-  // List to hold decoded JSON items
+  BoxShadow? _dynamicShadow; // Properly typed
+  double _opacity = 1.0;
   List<dynamic> _items = [];
 
   @override
   void initState() {
     super.initState();
-
-    // Load JSON data from assets on initialization
     _loadJson();
+    _opacity = 0.8;
+    _dynamicShadow = const BoxShadow(
+      color: Color.fromARGB(159, 0, 0, 0),
+      spreadRadius: 5,
+      blurRadius: 50,
+      offset: Offset(0, 9),
+    );
 
-    // Listen to page scroll for zooming logic
     _pageController.addListener(() {
       setState(() {
         _currentPage = _pageController.page ?? 0;
+        // Shadow can be updated here dynamically if needed
+        // Example: change shadow based on page, or animate it
       });
     });
   }
 
-  // Function to load and parse JSON file from assets
   Future<void> _loadJson() async {
-    // Load the raw string from the asset file
     final String response = await rootBundle.loadString('assets/test.json');
-
-    // Decode the JSON string into a Dart list
     final data = json.decode(response);
-
-    // Update state with parsed data
     setState(() {
       _items = data;
     });
   }
 
-  // Function to calculate zoom scale for each image
   double _calculateScale(int index) {
     return 1.0 - ((_currentPage - index).abs() * 0.5).clamp(0.0, 1.0);
   }
 
-
   @override
   Widget build(BuildContext context) {
-    final Width = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       body:
           _items.isEmpty
-              ? const Center(child: CircularProgressIndicator()) // Show loading
+              ? const Center(child: CircularProgressIndicator())
               : Column(
                 children: [
-                  SizedBox(
-                    height: Width /3.5,
-                  
-                  ),
+                  SizedBox(height: screenWidth / 3.5),
                   Center(
                     child: Container(
-                      decoration: BoxDecoration( color: Colors. grey, borderRadius: BorderRadius. circular(10.0), ),
-                      height: Width / 1.5,
-                      width: Width,
-                      
+                      clipBehavior: Clip.none,
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      height: screenWidth / 1.5,
+                      width: screenWidth,
                       child: PageView.builder(
                         itemCount: _items.length,
                         controller: _pageController,
                         itemBuilder: (context, index) {
                           final scale = _calculateScale(index);
+                          final shadow =
+                              scale > 0.85 && _dynamicShadow != null
+                                  ? [_dynamicShadow!]
+                                  : <BoxShadow>[];
+                          final opacity = scale < 0.85 ? 0.7 : 1.0;
+                          _opacity = opacity; // Update opacity based on scale
 
-                          // ✅ Accessing image path from decoded JSON data
                           final imagePath = _items[index]['MainImage'];
 
                           return Transform.scale(
                             scale: scale,
-                            child: Container(
-                              height: Width ,
-                              width: Width ,
-                              decoration: BoxDecoration(
-                                
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: const Color.fromARGB(255, 255, 0, 0).withOpacity(0.5),
-                                    spreadRadius: 5,
-                                    blurRadius: 50,
-                                    offset: Offset(0, 9),
-                                  ),
-                                ],
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(Width),
+                            child: Opacity(
+                              opacity: opacity,
+                              child: Container(
+                                margin: const EdgeInsets.symmetric(
+                                  vertical: 30,
                                 ),
-                                image: DecorationImage(
-                                  image: AssetImage(imagePath),
-                                  fit: BoxFit.fitHeight,
+                                height: screenWidth,
+                                width: screenWidth,
+                                decoration: BoxDecoration(
+                                  boxShadow: shadow,
+
+                                  borderRadius: BorderRadius.circular(
+                                    screenWidth,
+                                  ),
+                                  image: DecorationImage(
+                                    image: AssetImage(imagePath),
+                                    fit: BoxFit.fitHeight,
+                                  ),
                                 ),
                               ),
                             ),
@@ -108,6 +111,12 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                         },
                       ),
                     ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 30),
+                    color: Colors.amber,
+                    height: screenWidth / 3.5,
+                    width: screenWidth,
                   ),
                 ],
               ),
