@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_name/Recipe_page/Info.dart';
 import 'package:project_name/Recipe_page/food_ImageAnimatio.dart';
 
 class Content extends StatelessWidget {
@@ -9,8 +10,12 @@ class Content extends StatelessWidget {
     final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: CarouselFromJson()
-    
+      body: Stack(
+        children: [
+          CarouselFromJson(),
+        
+        ],
+      ),
     );
   }
 }

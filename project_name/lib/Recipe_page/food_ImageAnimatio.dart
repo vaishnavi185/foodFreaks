@@ -84,25 +84,29 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
 
                           final imagePath = _items[index]['MainImage'];
 
-                          return Transform.scale(
-                            scale: scale,
-                            child: Opacity(
-                              opacity: opacity,
-                              child: Container(
-                                margin: const EdgeInsets.symmetric(
-                                  vertical: 30,
-                                ),
-                                height: screenWidth,
-                                width: screenWidth,
-                                decoration: BoxDecoration(
-                                  boxShadow: shadow,
-
-                                  borderRadius: BorderRadius.circular(
-                                    screenWidth,
+                          return GestureDetector( onTap: () => 
+                          
+                            print('Image tapped: $imagePath'),
+                            child: Transform.scale(
+                              scale: scale,
+                              child: Opacity(
+                                opacity: opacity,
+                                child: Container(
+                                  margin: const EdgeInsets.symmetric(
+                                    vertical: 30,
                                   ),
-                                  image: DecorationImage(
-                                    image: AssetImage(imagePath),
-                                    fit: BoxFit.fitHeight,
+                                  height: screenWidth,
+                                  width: screenWidth,
+                                  decoration: BoxDecoration(
+                                    boxShadow: shadow,
+                            
+                                    borderRadius: BorderRadius.circular(
+                                      screenWidth,
+                                    ),
+                                    image: DecorationImage(
+                                      image: AssetImage(imagePath),
+                                      fit: BoxFit.fitHeight,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -112,12 +116,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 30),
-                    color: Colors.amber,
-                    height: screenWidth / 3.5,
-                    width: screenWidth,
-                  ),
+                 
                 ],
               ),
     );
