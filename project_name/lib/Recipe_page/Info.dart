@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 class InfoRecipe extends StatefulWidget {
@@ -49,8 +49,12 @@ class _InfoRecipeState extends State<InfoRecipe> {
                   Container(
                     child: Row(
                       children: [
-                        ImageIcon(AssetImage('assets/Base/stopwatch-start.svg'),
+                        SvgPicture.asset(
+                          'assets/stopwatch-start.svg',
                           color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+
                           ),
                         Text("Time: ${widget.recipe['Time'] ?? 'N/A'}",
                           style: TextStyle(
