@@ -1,6 +1,7 @@
 import 'dart:convert'; // To decode JSON
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // To load asset files
+import 'Info.dart';
 
 class CarouselFromJson extends StatefulWidget {
   const CarouselFromJson({super.key});
@@ -84,9 +85,20 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
 
                           final imagePath = _items[index]['MainImage'];
 
-                          return GestureDetector( onTap: () => 
-                          
-                            print('Image tapped: $imagePath'),
+                          return GestureDetector(
+                            onTap: () {
+                              final selectedItem = _items[index];
+                              print('Image tapped: $imagePath');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder:
+                                      (context) =>
+                                          InfoRecipe(recipe: selectedItem),
+                                ),
+                              );
+                              
+                            },
                             child: Transform.scale(
                               scale: scale,
                               child: Opacity(
@@ -99,7 +111,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                                   width: screenWidth,
                                   decoration: BoxDecoration(
                                     boxShadow: shadow,
-                            
+
                                     borderRadius: BorderRadius.circular(
                                       screenWidth,
                                     ),
@@ -116,7 +128,6 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                       ),
                     ),
                   ),
-                 
                 ],
               ),
     );
