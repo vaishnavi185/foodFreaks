@@ -50,13 +50,13 @@ class _InfoRecipeState extends State<InfoRecipe> {
                     child: Row(
                       children: [
                         SvgPicture.asset(
-                          'assets/stopwatch-start.svg',
+                          'assets/Iconly/Curved/Star.svg',
                           color: Color(0xff686F82),
                           width: 20, 
                           height: 20,
 
                           ),
-                        Text("Time: ${widget.recipe['Time'] ?? 'N/A'}",
+                        Text(" ${widget.recipe['rate'] ?? 'N/A'}",
                           style: TextStyle(
                             color: Color(0xff686F82),
                             fontSize: 16, fontWeight: FontWeight.normal,
@@ -66,12 +66,45 @@ class _InfoRecipeState extends State<InfoRecipe> {
                     ),
                   ),
                   SizedBox(width: 20),
-                  Text("Servings: ${widget.recipe['Servings'] ?? 'N/A'}",
-                    style: TextStyle(
-                      color: Color(0xff686F82),
-                      fontSize: 16, fontWeight: FontWeight.normal,
-                      fontFamily: 'Gilroy',
-                    )),
+                   Container(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/stopwatch-start.svg',
+                          color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+
+                          ),
+                        Text("${widget.recipe['Time'] ?? 'N/A'}",
+                          style: TextStyle(
+                            color: Color(0xff686F82),
+                            fontSize: 16, fontWeight: FontWeight.normal,
+                            fontFamily: 'Gilroy',
+                          )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/fo-hot-trend.svg',
+                          color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+                          ),
+                        Text("${widget.recipe['Kcal'] ?? 'N/A'}",
+                          style: TextStyle(
+                            color: Color(0xff686F82),
+                            fontSize: 16, fontWeight: FontWeight.normal,
+                            fontFamily: 'Gilroy',
+                          )),
+                      ],
+                    ),
+                  ),
+                 
                 ],
                )
         

@@ -66,7 +66,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                     child: Container(
                       clipBehavior: Clip.none,
                       decoration: BoxDecoration(
-                        color: Colors.transparent,
+                        color: const Color.fromARGB(255, 255, 0, 0),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       height: screenWidth / 1.5,
@@ -126,8 +126,10 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                           );
                         },
                       ),
+                      
                     ),
                   ),
+                  
                 ],
               ),
     );
