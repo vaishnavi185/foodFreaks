@@ -2,8 +2,8 @@
     {
         "id": 1,
         "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
-        "Time":"20 min",
+        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
+        "Time": "20 min",
         "Kcal": "150kcal",
         "MainImage": "assets/unsplash_TqOEGdRNowY.png",
         "Ingradient_1": "Broccoli",
@@ -16,13 +16,13 @@
         "Ingradient_4img": "assets/broccoli.png",
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
-        
-    },{
+    },
+    {
         "id": 2,
         "Name": "Fried ",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
-        "Time":"20 min",
-        "Kcal": "150kcal",
+        "Description": "   lablablablablThis is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
+        "Time": "0 min",
+        "Kcal": "100kcal",
         "MainImage": "assets/unsplash_TqOEGdRNowY.png",
         "Ingradient_1": "Broccoli",
         "Ingradient_1img": "assets/broccoli.png",
@@ -34,12 +34,12 @@
         "Ingradient_4img": "assets/broccoli.png",
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
-        
-    },{
+    },
+    {
         "id": 3,
         "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
-        "Time":"20 min",
+        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
+        "Time": "20 min",
         "Kcal": "150kcal",
         "MainImage": "assets/unsplash_TqOEGdRNowY.png",
         "Ingradient_1": "Broccoli",
@@ -52,12 +52,12 @@
         "Ingradient_4img": "assets/broccoli.png",
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
-        
-    },{
+    },
+    {
         "id": 4,
         "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
-        "Time":"20 min",
+        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
+        "Time": "20 min",
         "Kcal": "150kcal",
         "MainImage": "assets/unsplash_TqOEGdRNowY.png",
         "Ingradient_1": "Broccoli",
@@ -70,12 +70,12 @@
         "Ingradient_4img": "assets/broccoli.png",
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
-        
-    },{
+    },
+    {
         "id": 5,
         "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make" ,
-        "Time":"20 min",
+        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
+        "Time": "20 min",
         "Kcal": "150kcal",
         "MainImage": "assets/unsplash_TqOEGdRNowY.png",
         "Ingradient_1": "Broccoli",
@@ -88,6 +88,5 @@
         "Ingradient_4img": "assets/broccoli.png",
         "Ingradient_5": "Carrot",
         "Ingradient_5img": "assets/broccoli.png"
-        
     }
 ]

@@ -2,9 +2,11 @@ import 'dart:convert'; // To decode JSON
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // To load asset files
 import 'Info.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CarouselFromJson extends StatefulWidget {
-  const CarouselFromJson({super.key});
+   final Map<String, dynamic> recipe;
+  const CarouselFromJson({super.key ,required this.recipe});
 
   @override
   State<CarouselFromJson> createState() => _CarouselFromJsonState();
@@ -13,6 +15,7 @@ class CarouselFromJson extends StatefulWidget {
 class _CarouselFromJsonState extends State<CarouselFromJson> {
   final PageController _pageController = PageController(viewportFraction: 0.5);
   double _currentPage = 0.0;
+  int _currentIndex = 0;
   BoxShadow? _dynamicShadow; // Properly typed
   double _opacity = 1.0;
   List<dynamic> _items = [];
@@ -32,8 +35,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
     _pageController.addListener(() {
       setState(() {
         _currentPage = _pageController.page ?? 0;
-        // Shadow can be updated here dynamically if needed
-        // Example: change shadow based on page, or animate it
+       
       });
     });
   }
@@ -43,6 +45,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
     final data = json.decode(response);
     setState(() {
       _items = data;
+      _currentIndex = 0; // Reset current index when loading new data
     });
   }
 
@@ -66,7 +69,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                     child: Container(
                       clipBehavior: Clip.none,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 0, 0),
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       height: screenWidth / 1.5,
@@ -87,16 +90,18 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
 
                           return GestureDetector(
                             onTap: () {
+                              setState(() {
+                                _currentIndex = index;}); // Update selected index when tapped
                               final selectedItem = _items[index];
                               print('Image tapped: $imagePath');
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder:
-                                      (context) =>
-                                          InfoRecipe(recipe: selectedItem),
-                                ),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder:
+                              //         (context) =>
+                              //             InfoRecipe(recipe: selectedItem),
+                              //   ),
+                              // );
                               
                             },
                             child: Transform.scale(
@@ -129,9 +134,94 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                       
                     ),
                   ),
-                  
+                  Center(
+        child: Column(
+          children: [
+            Text(_items.isNotEmpty ? _items[_currentIndex]['Name'] : '',style: TextStyle(
+              color: Colors.white,
+              fontSize: 24, fontWeight: FontWeight.bold,
+              fontFamily: 'Gilroy',
+              )),
+              
+              Text(_items.isNotEmpty ? _items[_currentIndex]['Description'] ?? "No Description available" : '',
+               textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xff686F82),
+                
+                fontSize: 16, fontWeight: FontWeight.normal,
+                fontFamily: 'Gilroy',
+              )),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/Iconly/Curved/Star.svg',
+                          color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+
+                          ),
+                        Text(_items.isNotEmpty ? (_items[_currentIndex]['rate'] ?? 'N/A') : 'N/A',
+                          style: TextStyle(
+                            color: Color(0xff686F82),
+                            fontSize: 16, fontWeight: FontWeight.normal,
+                            fontFamily: 'Gilroy',
+                          )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                   Container(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/stopwatch-start.svg',
+                          color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+
+                          ),
+                        Text(_items.isNotEmpty?(_items[_currentIndex]['Time'] ?? 'N/A' ) : 'N/A',
+                          style: TextStyle(
+                            color: Color(0xff686F82),
+                            fontSize: 16, fontWeight: FontWeight.normal,
+                            fontFamily: 'Gilroy',
+                          )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/fo-hot-trend.svg',
+                          color: Color(0xff686F82),
+                          width: 20, 
+                          height: 20,
+                          ),
+                        Text(
+                          _items.isNotEmpty?( _items[_currentIndex]['Kcal']?? 'N/A') : 'N/A',
+                          style: TextStyle(
+                            color: Color(0xff686F82),
+                            fontSize: 16, fontWeight: FontWeight.normal,
+                            fontFamily: 'Gilroy',
+                          )),
+                      ],
+                    ),
+                  ),
+                 
                 ],
-              ),
+               )
+        
+          ],
+        ),
+      )
+      ],
+       ),
     );
   }
 }

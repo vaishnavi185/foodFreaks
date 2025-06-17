@@ -37,8 +37,10 @@ class _ContentState extends State<Content> {
           ? const Center(child: CircularProgressIndicator())
           : Stack(
               children: [
-                const CarouselFromJson(),
-                InfoRecipe(recipe: _recipes[1]), // ✅ Now it works
+               CarouselFromJson(
+                  recipe: _recipes[0], // Pass the first recipe to the carousel
+                ),
+                // InfoRecipe(recipe: _recipes[1]), 
               ],
             ),
     );
