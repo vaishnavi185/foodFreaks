@@ -1,7 +1,6 @@
 import 'dart:convert'; // To decode JSON
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // To load asset files
-import 'Info.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CarouselFromJson extends StatefulWidget {
@@ -135,89 +134,93 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                     ),
                   ),
                   Center(
-        child: Column(
-          children: [
-            Text(_items.isNotEmpty ? _items[_currentIndex]['Name'] : '',style: TextStyle(
-              color: Colors.white,
-              fontSize: 24, fontWeight: FontWeight.bold,
-              fontFamily: 'Gilroy',
-              )),
-              
-              Text(_items.isNotEmpty ? _items[_currentIndex]['Description'] ?? "No Description available" : '',
-               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color(0xff686F82),
-                
-                fontSize: 16, fontWeight: FontWeight.normal,
-                fontFamily: 'Gilroy',
-              )),
-               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/Iconly/Curved/Star.svg',
-                          color: Color(0xff686F82),
-                          width: 20, 
-                          height: 20,
-
-                          ),
-                        Text(_items.isNotEmpty ? (_items[_currentIndex]['rate'] ?? 'N/A') : 'N/A',
-                          style: TextStyle(
-                            color: Color(0xff686F82),
-                            fontSize: 16, fontWeight: FontWeight.normal,
-                            fontFamily: 'Gilroy',
-                          )),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                   Container(
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/stopwatch-start.svg',
-                          color: Color(0xff686F82),
-                          width: 20, 
-                          height: 20,
-
-                          ),
-                        Text(_items.isNotEmpty?(_items[_currentIndex]['Time'] ?? 'N/A' ) : 'N/A',
-                          style: TextStyle(
-                            color: Color(0xff686F82),
-                            fontSize: 16, fontWeight: FontWeight.normal,
-                            fontFamily: 'Gilroy',
-                          )),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/fo-hot-trend.svg',
-                          color: Color(0xff686F82),
-                          width: 20, 
-                          height: 20,
-                          ),
-                        Text(
-                          _items.isNotEmpty?( _items[_currentIndex]['Kcal']?? 'N/A') : 'N/A',
-                          style: TextStyle(
-                            color: Color(0xff686F82),
-                            fontSize: 16, fontWeight: FontWeight.normal,
-                            fontFamily: 'Gilroy',
-                          )),
-                      ],
-                    ),
-                  ),
                  
-                ],
-               )
-        
-          ],
+        child: Padding(
+          padding:  EdgeInsets.fromLTRB( screenWidth/40, 0, screenWidth/40, 0),
+          child: Column(
+            children: [
+              Text(_items.isNotEmpty ? _items[_currentIndex]['Name'] : '',style: TextStyle(
+                color: Colors.white,
+                fontSize: 24, fontWeight: FontWeight.bold,
+                fontFamily: 'Gilroy',
+                )),
+                
+                Text(_items.isNotEmpty ? _items[_currentIndex]['Description'] ?? "No Description available" : '',
+                 textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xff686F82),
+                  
+                  fontSize: 16, fontWeight: FontWeight.normal,
+                  fontFamily: 'Gilroy',
+                )),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/Iconly/Curved/Star.svg',
+                            color: Color(0xff686F82),
+                            width: 20, 
+                            height: 20,
+          
+                            ),
+                          Text(_items.isNotEmpty ? (_items[_currentIndex]['rate'] ?? 'N/A') : 'N/A',
+                            style: TextStyle(
+                              color: Color(0xff686F82),
+                              fontSize: 16, fontWeight: FontWeight.normal,
+                              fontFamily: 'Gilroy',
+                            )),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                     Container(
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/stopwatch-start.svg',
+                            color: Color(0xff686F82),
+                            width: 20, 
+                            height: 20,
+          
+                            ),
+                          Text(_items.isNotEmpty?(_items[_currentIndex]['Time'] ?? 'N/A' ) : 'N/A',
+                            style: TextStyle(
+                              color: Color(0xff686F82),
+                              fontSize: 16, fontWeight: FontWeight.normal,
+                              fontFamily: 'Gilroy',
+                            )),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Container(
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/fo-hot-trend.svg',
+                            color: Color(0xff686F82),
+                            width: 20, 
+                            height: 20,
+                            ),
+                          Text(
+                            _items.isNotEmpty?( _items[_currentIndex]['Kcal']?? 'N/A') : 'N/A',
+                            style: TextStyle(
+                              color: Color(0xff686F82),
+                              fontSize: 16, fontWeight: FontWeight.normal,
+                              fontFamily: 'Gilroy',
+                            )),
+                        ],
+                      ),
+                    ),
+                   
+                  ],
+                 )
+          
+            ],
+          ),
         ),
       )
       ],

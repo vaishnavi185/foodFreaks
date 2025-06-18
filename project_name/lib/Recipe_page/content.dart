@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // for rootBundle
-import 'package:project_name/Recipe_page/Info.dart';
 import 'package:project_name/Recipe_page/food_ImageAnimatio.dart';
 
 class Content extends StatefulWidget {
