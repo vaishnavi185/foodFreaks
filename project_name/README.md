@@ -40,15 +40,15 @@ In today’s fast-paced world, people struggle to make informed food choices due
 
 | Home Screen | Food Details |
 |-------------|--------------|
-| ![Home](screenshots/Android Large - 14.png) | ![Food Details](screenshots/Android Large - 13.png) |
+| ![Home](screenshots/AndroidLarge14.png) | ![Food Details](screenshots/AndroidLarge13.png) |
 
 | Signup | Login |
 |--------|-------|
-| ![Signup](screenshots/iPhone 16 Pro - 3.png) | ![Login](screenshots/iPhone 16 Pro - 4.png) |
+| ![Signup](screenshots/iPhone16Pro3.png) | ![Login](screenshots/iPhone16Pro4.png) |
 
 | Scan View | Profile Form |
 |-----------|--------------|
-| ![Scan](screenshots/iPhone 16 Pro - 9.png) | ![Profile](./screenshots/iPhone 16 Pro - 10.png) |
+| ![Scan](screenshots/iPhone16Pro9.png) | ![Profile](./screenshots/iPhone16Pro10.png) |
 
 ---
 
