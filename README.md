@@ -25,7 +25,7 @@ Camera / Image Picker – For food image input
 
 Nutrition APIs / Local Dataset – For food composition and dietary rules
 
-🎨 Figma Design: View UI Mockups
+🎨 Figma Design: https://www.figma.com/design/Ut9bgFN6cMg8yTjI3NJ7fB/food-scanner?node-id=0-1&t=q3Svzyd46MduJAzd-1
 
 📦 Future Enhancements
 🧬 User-based calorie tracking
