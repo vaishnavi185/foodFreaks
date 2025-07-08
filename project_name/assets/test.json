@@ -1,92 +1,77 @@
 [
-    {
-        "id": 1,
-        "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
-        "Time": "20 min",
-        "Kcal": "150kcal",
-        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
-        "Ingradient_1": "Broccoli",
-        "Ingradient_1img": "assets/broccoli.png",
-        "Ingradient_2": "Chilli",
-        "Ingradient_2img": "assets/broccoli.png",
-        "Ingradient_3": "Corn",
-        "Ingradient_3img": "assets/broccoli.png",
-        "Ingradient_4": "Carrot",
-        "Ingradient_4img": "assets/broccoli.png",
-        "Ingradient_5": "Carrot",
-        "Ingradient_5img": "assets/broccoli.png"
-    },
-    {
-        "id": 2,
-        "Name": "Fried ",
-        "Description": "   lablablablablThis is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
-        "Time": "0 min",
-        "Kcal": "100kcal",
-        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
-        "Ingradient_1": "Broccoli",
-        "Ingradient_1img": "assets/broccoli.png",
-        "Ingradient_2": "Chilli",
-        "Ingradient_2img": "assets/broccoli.png",
-        "Ingradient_3": "Corn",
-        "Ingradient_3img": "assets/broccoli.png",
-        "Ingradient_4": "Carrot",
-        "Ingradient_4img": "assets/broccoli.png",
-        "Ingradient_5": "Carrot",
-        "Ingradient_5img": "assets/broccoli.png"
-    },
-    {
-        "id": 3,
-        "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
-        "Time": "20 min",
-        "Kcal": "150kcal",
-        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
-        "Ingradient_1": "Broccoli",
-        "Ingradient_1img": "assets/broccoli.png",
-        "Ingradient_2": "Chilli",
-        "Ingradient_2img": "assets/broccoli.png",
-        "Ingradient_3": "Corn",
-        "Ingradient_3img": "assets/broccoli.png",
-        "Ingradient_4": "Carrot",
-        "Ingradient_4img": "assets/broccoli.png",
-        "Ingradient_5": "Carrot",
-        "Ingradient_5img": "assets/broccoli.png"
-    },
-    {
-        "id": 4,
-        "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
-        "Time": "20 min",
-        "Kcal": "150kcal",
-        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
-        "Ingradient_1": "Broccoli",
-        "Ingradient_1img": "assets/broccoli.png",
-        "Ingradient_2": "Chilli",
-        "Ingradient_2img": "assets/broccoli.png",
-        "Ingradient_3": "Corn",
-        "Ingradient_3img": "assets/broccoli.png",
-        "Ingradient_4": "Carrot",
-        "Ingradient_4img": "assets/broccoli.png",
-        "Ingradient_5": "Carrot",
-        "Ingradient_5img": "assets/broccoli.png"
-    },
-    {
-        "id": 5,
-        "Name": "Fried Shrimp",
-        "Description": "This is my kind of breakfast egg sandwich and it takes under  5 minutes to make",
-        "Time": "20 min",
-        "Kcal": "150kcal",
-        "MainImage": "assets/unsplash_TqOEGdRNowY.png",
-        "Ingradient_1": "Broccoli",
-        "Ingradient_1img": "assets/broccoli.png",
-        "Ingradient_2": "Chilli",
-        "Ingradient_2img": "assets/broccoli.png",
-        "Ingradient_3": "Corn",
-        "Ingradient_3img": "assets/broccoli.png",
-        "Ingradient_4": "Carrot",
-        "Ingradient_4img": "assets/broccoli.png",
-        "Ingradient_5": "Carrot",
-        "Ingradient_5img": "assets/broccoli.png"
-    }
+  {
+    "id": 1,
+    "Name": "Fried Shrimp",
+    "Description": "This is my kind of breakfast egg sandwich and it takes under 5 minutes to make",
+    "Time": "20 min",
+    "Kcal": "150kcal",
+    "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+    "Ingredients": [
+      { "name": "Broccoli", "image": "assets/broccoli.png" },
+      { "name": "Chilli", "image": "assets/chilli.png" },
+      { "name": "Corn", "image": "assets/corn.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" }
+    ]
+  },
+  {
+    "id": 2,
+    "Name": "Fried ",
+    "Description": "lablablablablThis is my kind of breakfast egg sandwich and it takes under 5 minutes to make",
+    "Time": "0 min",
+    "Kcal": "100kcal",
+    "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+    "Ingredients": [
+      { "name": "Broccoli", "image": "assets/broccoli.png" },
+      { "name": "Chilli", "image": "assets/chilli.png" },
+      { "name": "Corn", "image": "assets/corn.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" }
+    ]
+  },
+  {
+    "id": 3,
+    "Name": "Fried Shrimp",
+    "Description": "This is my kind of breakfast egg sandwich and it takes under 5 minutes to make",
+    "Time": "20 min",
+    "Kcal": "150kcal",
+    "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+    "Ingredients": [
+      { "name": "Broccoli", "image": "assets/broccoli.png" },
+      { "name": "Chilli", "image": "assets/chilli.png" },
+      { "name": "Corn", "image": "assets/corn.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" }
+    ]
+  },
+  {
+    "id": 4,
+    "Name": "Fried Shrimp",
+    "Description": "This is my kind of breakfast egg sandwich and it takes under 5 minutes to make",
+    "Time": "20 min",
+    "Kcal": "150kcal",
+    "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+    "Ingredients": [
+      { "name": "Broccoli", "image": "assets/broccoli.png" },
+      { "name": "Chilli", "image": "assets/chilli.png" },
+      { "name": "Corn", "image": "assets/corn.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" }
+    ]
+  },
+  {
+    "id": 5,
+    "Name": "Fried Shrimp",
+    "Description": "This is my kind of breakfast egg sandwich and it takes under 5 minutes to make",
+    "Time": "20 min",
+    "Kcal": "150kcal",
+    "MainImage": "assets/unsplash_TqOEGdRNowY.png",
+    "Ingredients": [
+      { "name": "Broccoli", "image": "assets/broccoli.png" },
+      { "name": "Chilli", "image": "assets/chilli.png" },
+      { "name": "Corn", "image": "assets/corn.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" },
+      { "name": "Carrot", "image": "assets/carrot.png" }
+    ]
+  }
 ]

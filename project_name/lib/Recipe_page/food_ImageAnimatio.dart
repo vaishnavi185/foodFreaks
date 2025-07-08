@@ -18,6 +18,7 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
   BoxShadow? _dynamicShadow; // Properly typed
   double _opacity = 1.0;
   List<dynamic> _items = [];
+  int IngadientCount = 0;
 
   @override
   void initState() {
@@ -30,6 +31,9 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
       blurRadius: 50,
       offset: Offset(0, 9),
     );
+
+    // Initialize IngadientCount using widget.recipe
+    IngadientCount = widget.recipe['Ingridients']?.length ?? 0;
 
     _pageController.addListener(() {
       setState(() {
@@ -215,10 +219,30 @@ class _CarouselFromJsonState extends State<CarouselFromJson> {
                         ],
                       ),
                     ),
-                   
                   ],
-                 )
-          
+                 ),
+                 SizedBox(height: screenWidth/20),
+                 Container(child:
+                 Column(children: [
+                  Row(
+                    children: [
+                      Text("Ingridients",textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 19, fontWeight: FontWeight.bold,
+                          fontFamily: 'Gilroy',
+                        )),SizedBox(width: screenWidth/2.5,),
+                      Text('',textAlign: TextAlign.end,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 19, fontWeight: FontWeight.bold,
+                          fontFamily: 'Gilroy',
+                        )),
+
+                    ],
+                  ),
+                 ],)
+                 ,)
             ],
           ),
         ),

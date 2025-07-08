@@ -1,16 +1,64 @@
-# project_name
+# 🍽️ FoodFreaks - Smart Food Scanner App
 
-A new Flutter project.
+**FoodFreaks** is a Flutter-based mobile app that empowers users to make healthier dietary choices by instantly scanning food items—both packaged and plated—to receive personalized nutritional insights, allergy alerts, and diet recommendations.
 
-## Getting Started
+![Banner](screenshots/banner.png)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🔍 Problem Statement
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+In today’s fast-paced world, people struggle to make informed food choices due to complex and generic nutritional labels. FoodFreaks solves this by providing real-time, personalized feedback based on the user's medical history, allergies, and preferences.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧠 Key Features
+
+- **📷 Scan Food Items**: Instantly scan food packets or real meals (e.g., pizza) using camera-based detection.
+- **👩‍⚕️ Personalized Recommendations**: Tailored advice based on user's health conditions, allergies, and goals.
+- **🍬 Calorie & Sugar Tracking**: Real-time breakdown of calories, sugar, and other nutrition metrics.
+- **📋 Health Profile Tracking**: Users can input and manage health data for improved recommendations.
+- **🤖 AI-Powered Recognition**: Food classification and breakdown using machine learning (TensorFlow).
+- **🧾 History & Logs**: Keeps a record of scanned items and nutritional history.
+- **🌐 Google & Facebook Authentication**: Easy onboarding via Firebase.
+
+---
+
+## 🚀 Tech Stack
+
+| Layer             | Technology         |
+|------------------|--------------------|
+| Frontend         | Flutter (Dart)     |
+| Backend          | Firebase           |
+| Auth & Cloud     | Firebase Auth + FCM|
+| AI/ML            | Python + TensorFlow|
+| Design           | Figma              |
+
+---
+
+## 📲 UI Screenshots
+
+| Home Screen | Food Details |
+|-------------|--------------|
+| ![Home](screenshots/Android Large - 14.png) | ![Food Details](screenshots/Android Large - 13.png) |
+
+| Signup | Login |
+|--------|-------|
+| ![Signup](screenshots/iPhone 16 Pro - 3.png) | ![Login](screenshots/iPhone 16 Pro - 4.png) |
+
+| Scan View | Profile Form |
+|-----------|--------------|
+| ![Scan](screenshots/iPhone 16 Pro - 9.png) | ![Profile](./screenshots/iPhone 16 Pro - 10.png) |
+
+---
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+
+- Flutter SDK (>=3.0.0)
+- Android Studio or VSCode
+- Firebase Project
+- Python (for model training, optional)
+
+---
