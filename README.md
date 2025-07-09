@@ -1,48 +1,63 @@
-🍽️ Food Freaks – Smart AI-Powered Food Scanner
-A Flutter application that uses AI and camera integration to scan packaged and fresh foods, analyze nutritional content, and guide users on intake quantity based on dietary standards.
+# 🍽️ FoodFreaks - Smart Food Scanner App
 
-🔍 Features
-📸 AI Camera Scanner – Detect food items using real-time camera input powered by AI.
+**FoodFreaks** is a Flutter-based mobile app that empowers users to make healthier dietary choices by instantly scanning food items—both packaged and plated—to receive personalized nutritional insights, allergy alerts, and diet recommendations.
 
-🧠 Nutritional Analysis – Scan packaged foods to get detailed nutritional breakdowns (e.g., calories, carbs, proteins, fats).
 
-⚖️ Dietary Intake Guidance – Suggest portion sizes and intake frequency based on health guidelines and user goals.
+---
 
-🏷️ Barcode/Label Recognition – Recognizes food packages using OCR and barcode detection.
+## 🔍 Problem Statement
 
-🗂️ History Tracking – Stores scanned items with timestamp for tracking consumption patterns.
+In today’s fast-paced world, people struggle to make informed food choices due to complex and generic nutritional labels. FoodFreaks solves this by providing real-time, personalized feedback based on the user's medical history, allergies, and preferences.
 
-☁️ Firebase Integration – Cloud support for user data, auth, and personalized suggestions.
+---
 
-🚀 Tech Stack
-Flutter – Cross-platform UI
+## 🧠 Key Features
 
-TensorFlow Lite / Google ML Kit / Custom Model – For AI food recognition
+- **📷 Scan Food Items**: Instantly scan food packets or real meals (e.g., pizza) using camera-based detection.
+- **👩‍⚕️ Personalized Recommendations**: Tailored advice based on user's health conditions, allergies, and goals.
+- **🍬 Calorie & Sugar Tracking**: Real-time breakdown of calories, sugar, and other nutrition metrics.
+- **📋 Health Profile Tracking**: Users can input and manage health data for improved recommendations.
+- **🤖 AI-Powered Recognition**: Food classification and breakdown using machine learning (TensorFlow).
+- **🧾 History & Logs**: Keeps a record of scanned items and nutritional history.
+- **🌐 Google & Facebook Authentication**: Easy onboarding via Firebase.
 
-Firebase – Auth, Firestore, and cloud storage
+---
 
-Camera / Image Picker – For food image input
+## 🚀 Tech Stack
 
-Nutrition APIs / Local Dataset – For food composition and dietary rules
+| Layer             | Technology         |
+|------------------|--------------------|
+| Frontend         | Flutter (Dart)     |
+| Backend          | Firebase           |
+| Auth & Cloud     | Firebase Auth + FCM|
+| AI/ML            | Python + TensorFlow|
+| Design           | Figma              |
 
-🎨 Figma Design: https://www.figma.com/design/Ut9bgFN6cMg8yTjI3NJ7fB/food-scanner?node-id=0-1&t=q3Svzyd46MduJAzd-1
+---
 
-📦 Future Enhancements
-🧬 User-based calorie tracking
+## 📲 UI Screenshots
 
-📊 Visual dashboards for weekly/monthly intake
+| Home Screen | Food Details |
+|-------------|--------------|
+| ![Home](./assets/screenshots/AndroidLarge14.png) | ![Food Details](./assets/screenshots/AndroidLarge13.png) |
 
-🌍 Multi-language support
+| Signup | Login |
+|--------|-------|
+| ![Signup](./assets/screenshots/iPhone16Pro3.png) | ![Login](./assets/screenshots/iPhone16Pro4.png) |
 
-🥗 Integration with meal plans and fitness apps
+| Scan View | Profile Form |
+|-----------|--------------|
+| ![Scan](./assets/screenshots/iPhone16Pro9.png) | ![Profile](./assets/screenshots/iPhone16Pro10.png) |
 
-🔧 Installation (basic structure)
-bash
-Copy
-Edit
-git clone https://github.com/your-username/food-freaks.git
-cd food-freaks
-flutter pub get
-flutter run
-📝 Short GitHub Repo Description:
-A Flutter + AI food scanning app that detects food items and gives dietary intake guidance using camera and nutrition analysis. 🍕📷
+---
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+
+- Flutter SDK (>=3.0.0)
+- Android Studio or VSCode
+- Firebase Project
+- Python (for model training, optional)
+
+---
