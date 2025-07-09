@@ -2,7 +2,6 @@
 
 **FoodFreaks** is a Flutter-based mobile app that empowers users to make healthier dietary choices by instantly scanning food items—both packaged and plated—to receive personalized nutritional insights, allergy alerts, and diet recommendations.
 
-![Banner](screenshots/banner.png)
 
 ---
 
@@ -40,15 +39,15 @@ In today’s fast-paced world, people struggle to make informed food choices due
 
 | Home Screen | Food Details |
 |-------------|--------------|
-| ![Home](screenshots/AndroidLarge14.png) | ![Food Details](screenshots/AndroidLarge13.png) |
+| ![Home](./assets/screenshots/AndroidLarge14.png) | ![Food Details](./assets/screenshots/AndroidLarge13.png) |
 
 | Signup | Login |
 |--------|-------|
-| ![Signup](screenshots/iPhone16Pro3.png) | ![Login](screenshots/iPhone16Pro4.png) |
+| ![Signup](./assets/screenshots/iPhone16Pro3.png) | ![Login](./assets/screenshots/iPhone16Pro4.png) |
 
 | Scan View | Profile Form |
 |-----------|--------------|
-| ![Scan](screenshots/iPhone16Pro9.png) | ![Profile](./screenshots/iPhone16Pro10.png) |
+| ![Scan](./assets/screenshots/iPhone16Pro9.png) | ![Profile](./assets/screenshots/iPhone16Pro10.png) |
 
 ---
 
